@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>boolAndCond</title>
+</head>
+<body>
+    <button onclick="let b =Math.random() ;
+    if(b>= 0 && b<1/3 ){alert('rock');}
+    else if(b>= 1/3 && b<2/3){alert('paper');}
+    else{alert('seassor');}
+    ">generate and pop</button>
+
+    <script>
+        console.log(3>5);
+        console.log(5 == "5"); //using == is less likly
+        console.log(5 === "5");
+
+        let a = false
+
+        if(a){
+            console.log('hello')
+        }
+        else{
+            console.log('bye')
+        }
+        //else if
+
+        //&& and op
+        //|| or op
+        // ! not op
+
+        //falsy values --> false 0 '' NaN undefined null 
+        //everything else is truthy value
+
+        //ternary operator
+        //true ? 'truthy' : 'falsy';
+
+
+        //advance terneary operator
+        // const meeage = 5 && 'message'
+        //   if the value is false it store false else it store the othe message;
+
+        //shortcircuit value to avoild invale
+        // const currency = " is no currency choosen the nor " || 'USD';
+    </script>
+</body>
+</html>

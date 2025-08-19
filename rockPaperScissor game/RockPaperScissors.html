@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissor</title>
+</head>
+<body>
+        <h1>Rock Paper Scissors game</h1>
+    <button onclick="play('rock'); showr()" > rock</button>
+    <button onclick="play('paper'); showr()"> paper</button>
+    <button onclick="play('scissor') ; showr()"> scissors</button>
+    <p 
+    class="para">
+    </p>
+    <button onclick="score.win = 0 ; score.loose = 0 , score.draw = 0 ; localStorage.removeItem('score')"> reset</button>
+
+    <script src="RPS.js"></script>
+</body>
+</html>

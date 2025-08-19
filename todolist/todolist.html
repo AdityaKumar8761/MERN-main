@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>todolist</title>
+    <style>
+        .p{
+            display:inline-block;
+            width: 140px;
+        }
+        .b{
+            background-color: rgb(175, 40, 40);
+            color: white;
+            padding: 5px 20px 5px 20px;
+            border: none;
+            border-radius: 4px;
+            transition: opacity 0.2s;
+        }
+        .b:hover{
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <h1>To do list</h1>
+    <input type="text" placeholder="Todo name" class="todoname" onkeydown= "if(event.key === 'Enter'){Addtodo()}">
+    <input type="date" class="js-dueDate">
+    <button onclick="Addtodo()">Add</button>
+    <div class="js-todo-list">
+    </div>
+    
+
+    <script src="todolist.js"></script>
+</body>
+</html>

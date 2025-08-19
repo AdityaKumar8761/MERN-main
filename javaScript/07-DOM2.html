@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .subutton{
+            background-color: black;
+            border-radius: 600px;
+            color: white;
+            padding: 10px 15px 10px 15px;
+            border: none;
+            font-weight: bold;
+            cursor:pointer;
+            transition: opacity .2s;
+        }
+        .subutton:hover{
+            opacity: 0.7;
+        }
+        .is-sub{
+            background-color: rgb(237, 237, 237);
+            color: black;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick=subscribe(); class="subscribe subutton">Subscribe</button>
+
+    <p>Amazon shipping Calculator</p>
+    <input type="text" class="cal" placeholder="Cost of Order" onkeydown= "if(event.key === 'Enter'){cal()}">
+    <button onclick= cal();>Calculat</button>
+    <p class="par">The total cost is = </p>
+
+
+
+    <script src="DOM2.js"></script>
+</body>
+</html> 
