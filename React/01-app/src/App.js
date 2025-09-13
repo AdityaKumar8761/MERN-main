@@ -2,6 +2,7 @@
 import React from "react";
 // import Mycomponent from "./Mycomponent";
 import Timer from './Timer'
+import { HashRouter , Routers, Route } from "react-router-dom";
 
 
 function App() {
