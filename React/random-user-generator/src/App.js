@@ -1,14 +1,23 @@
-import  {useEffect} from 'react';
-import { getRandomUser } from "./API"
+import { useEffect, useState } from 'react';
+import { getRandomUser } from "./API";
+import UserCard from "./component/UserCard";
 
 function App() {
-    useEffect(() => {
-      getRandomUser().then((user) => console.log(user))
-    },[]);
+  const [userData , setUserData] = useState(null);
+
+  useEffect(() => {
+    getRandomUser().then((user) => setUserData(user.results[0]));
+  }, []);
+
+  const refresh =() => {
+    getRandomUser().then((user) => setUserData(user.results[0]));
+  }
+
 
   return (
     <div>
-
+      {userData && <UserCard d={userData} />}
+      <button onClick={refresh}>Refresh</button>
     </div>
   );
 }

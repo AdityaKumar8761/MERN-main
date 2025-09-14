@@ -24,3 +24,17 @@ function App() {
 }
 
 export default App;
+
+
+--------------->important for ContextApi<------------
+create a funtion or a hook for connecting contex
+
+export const useCart = () =>{
+  const cart = useContext(CartContext);
+  return cart;
+}
+
+then you can use directly without importing the useCotext
+
+like 
+const cart = useCart();
