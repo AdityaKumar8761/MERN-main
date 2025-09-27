@@ -2,8 +2,10 @@ const fs = require("fs");
 
 // const n = "Hello world, this is aditya"
 // fs.writeFileSync("./file.txt" , n);
+//Blocking request...
 
 fs.writeFile("./file2.txt", "my name is aditya" , (err) => {})
+//Non blocking request...
 
 
 //readfile 
@@ -27,5 +29,6 @@ fs.unlinkSync('./copy.txt') //delete file
 
 console.log(fs.statSync('./file.txt')); //to check stats of the directory
 
+fs.mkdirSync('./newDir'); //make new directory 
 
 
