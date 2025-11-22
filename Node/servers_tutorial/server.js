@@ -20,6 +20,10 @@ app.get('/idli' , (req,res) =>{
     res.send(customized_idli)
 } )
 
+app.post('/person' , (req, res)=>{
+  res.send('data is saved')
+})
+
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
