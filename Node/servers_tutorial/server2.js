@@ -3,16 +3,33 @@ const app = express()
 const port = 3000
 const db = require('./db')
 
+const passport = require('./auth');
+
+
 const Person = require('./models/Person')
 const menuItem = require('./models/menuItem')
+
+
+
+app.use(passport.initialize());
+
+//using middleware for clearner code
+const localAuthMiddleWare = passport.authenticate('local' , {session: false})
+
+
 
 //for parser data into json
 const bodyParser = require('body-parser');
 app.use(bodyParser.json()) //data stored in --> req.body
 
-app.get('/', (req, res) => {
-  res.send('welcome to my hotel')
+
+
+
+app.get('/',localAuthMiddleWare, function(req, res){
+  res.send('Welcome to our Hotel');
 })
+
+
 
 app.post('/leanPerson' , (req,res)=>{
   const data = req.body  
@@ -36,11 +53,18 @@ app.post('/leanPerson' , (req,res)=>{
 
 
 
+
+
+
+
+
+
+
 //Importing the router files
 const personRouters = require('./routes/personRoutes');
 
 //using the routers
-app.use('/person' , personRouters);
+app.use('/person' ,localAuthMiddleWare, personRouters);
 
 
 
@@ -55,3 +79,5 @@ app.listen(port, () => {
 // r -> read   -> Get
 // u -> update -> Put/Patch
 // d -> Delete -> Delete
+
+

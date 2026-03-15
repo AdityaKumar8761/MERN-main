@@ -17,6 +17,14 @@ const personSchema = new mongoose.Schema({
     mobile: {
         type: String,
         unique: true
+    },
+    username:{
+        require: true,
+        type: String
+    },
+    password:{
+        require: true,
+        type: String
     }
 })
 
